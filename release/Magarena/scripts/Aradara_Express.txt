@@ -11,4 +11,3 @@ ability=Menace;\
         Crew 4
 timing=artifact
 oracle=Menace\nCrew 4
-status=not supported: blocking-restriction
