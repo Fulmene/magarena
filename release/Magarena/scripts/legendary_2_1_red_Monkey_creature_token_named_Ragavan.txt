@@ -1,0 +1,8 @@
+name=legendary 2/1 red Monkey creature token named Ragavan
+token=Ragavan
+image=https://magiccards.info/extras/token/aether-revolt/ragavan.jpg
+value=2
+type=Legendary,Creature
+subtype=Monkey
+color=r
+pt=2/1
