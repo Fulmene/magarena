@@ -16,6 +16,8 @@ public class MagicPredefinedFormat extends MagicFormat {
     // @name: display name in UI.
     // @filename: case-sensitive name of file (without extension) in magic/data/formats.
 
+    public static final MagicFormat IXALAN_STANDARD = new MagicPredefinedFormat("Ixalan Standard", "ixalan_standard");
+
     public static final MagicFormat STANDARD = new MagicPredefinedFormat("Standard", "standard");
     public static final MagicFormat MODERN = new MagicPredefinedFormat("Modern", "modern");
     public static final MagicFormat LEGACY = new MagicPredefinedFormat("Legacy", "legacy");
@@ -47,6 +49,7 @@ public class MagicPredefinedFormat extends MagicFormat {
     public static final MagicFormat IXALAN_BLOCK = new MagicPredefinedFormat("Ixalan block", "ixalan_block");
 
     private static final List<MagicFormat> values = Collections.unmodifiableList(Arrays.asList(
+        IXALAN_STANDARD,
         STANDARD,
         MODERN,
         LEGACY,
