@@ -45,6 +45,8 @@ public enum MagicAbility {
     Flying("flying",50),
     FirstStrike("first strike",50),
 
+    Menace("menace", 50),
+
     Plainswalk("plainswalk",10),
     Islandwalk("islandwalk",10),
     Swampwalk("swampwalk",10),

@@ -1,5 +1,6 @@
 package magic.model.choice;
 
+import magic.model.MagicAbility;
 import magic.model.MagicGame;
 import magic.model.MagicPermanent;
 import magic.model.MagicPlayer;
@@ -82,6 +83,13 @@ public class MagicDeclareBlockersResultBuilder {
                 }
             }
 
+            if (block.entrySet().stream()
+                    .anyMatch(e -> attackers[e.getKey()].hasAbility(MagicAbility.Menace)
+                        && e.getValue().size() == 1)) {
+                i--;
+                continue;
+            }
+
             //convert block to a MagicDeclareBlockersResult object
             result.clear();
             for (int j = 0; j < attackers.length; j++) {
@@ -127,12 +135,14 @@ public class MagicDeclareBlockersResultBuilder {
 
         // One blocker.
         if (blockersSize == 1) {
-            final MagicCombatCreature blocker = candidateBlockers[0];
-            blockers.remove(blocker);
-            result.addLast(new MagicCombatCreature[]{attacker,blocker});
-            buildBlockersForAttacker(index+1);
-            result.removeLast();
-            blockers.add(blocker);
+            if (!attacker.hasAbility(MagicAbility.Menace)) {
+                final MagicCombatCreature blocker = candidateBlockers[0];
+                blockers.remove(blocker);
+                result.addLast(new MagicCombatCreature[]{attacker,blocker});
+                buildBlockersForAttacker(index+1);
+                result.removeLast();
+                blockers.add(blocker);
+            }
             return;
         }
 
