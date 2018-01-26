@@ -1,14 +1,13 @@
-name=Untamed Hunger
-image=https://magiccards.info/scans/en/ogw/91.jpg
-image_updated=2016-02-29
+name=Giant Spectacle
+image=https://magiccards.info/scans/en/kld/116.jpg
+image_updated=2016-10-05
 value=2.500
 rarity=C
 type=Enchantment
 subtype=Aura
-cost={2}{B}
+cost={1}{R}
 ability=Enchant creature;\
         Enchanted creature gets +2/+1 and has menace.
 timing=aura
 enchant=default,creature
 oracle=Enchant creature\nEnchanted creature gets +2/+1 and has menace.
-status=not supported: blocking-restriction
