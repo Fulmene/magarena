@@ -7,8 +7,7 @@ subtype=Dinosaur
 cost={2}{R}
 pt=3/3
 ability=Menace;\
-        Players can't gain life.;\
         Whenever another creature enters the battlefield, SN deals 1 damage to that creature's controller.
 timing=main
+requires_groovy_code=Forsaken Wastes
 oracle=Menace\nPlayers can't gain life.\nWhenever another creature enters the battlefield, Rampaging Ferocidon deals 1 damage to that creature's controller.
-status=not supported: blocking-restriction
