@@ -10,4 +10,3 @@ ability=Menace;\
         Cycling {2}
 timing=main
 oracle=Menace\nCycling {2}
-status=not supported: blocking-restriction
