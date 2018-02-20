@@ -6,8 +6,7 @@ type=Creature
 subtype=Orc,Pirate,Wizard
 cost={3}{B}{B}
 pt=4/4
-ability=Menace, deathtouch;\
-        When SN enters the battlefield, each player loses a third of his or her life, rounded up.
+ability=Menace, deathtouch
 timing=main
+requires_groovy_code
 oracle=Menace, deathtouch\nWhen Dire Fleet Ravager enters the battlefield, each player loses a third of his or her life, rounded up.
-status=not supported: blocking-restriction
