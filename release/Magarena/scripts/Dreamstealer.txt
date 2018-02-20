@@ -7,8 +7,7 @@ subtype=Human,Wizard
 cost={2}{B}
 pt=1/2
 ability=Menace;\
-        Whenever SN deals combat damage to a player, that player discards that many cards.;\
         Eternalize {4}{B}{B}
 timing=main
+requires_groovy_code
 oracle=Menace\nWhenever Dreamstealer deals combat damage to a player, that player discards that many cards.\nEternalize {4}{B}{B}
-status=not supported: blocking-restriction
