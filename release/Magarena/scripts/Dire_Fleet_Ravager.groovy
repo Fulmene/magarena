@@ -11,8 +11,8 @@
         @Override
         public void executeEvent(final MagicGame game, final MagicEvent event) {
             game.getAPNAP().each {
-                def life = MagicAmountFactory.LifeTotal.getAmount(event.getSource(), it);
-                def amount = (life + 2).intdiv(3);
+                final int life = MagicAmountFactory.LifeTotal.getAmount(event.getSource(), it);
+                final int amount = (int)(life + 2).intdiv(3);
                 game.doAction(new ChangeLifeAction(it, -amount));
             }
         }
