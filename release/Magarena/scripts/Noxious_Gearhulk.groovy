@@ -15,7 +15,7 @@
                 def destroyAction = new DestroyAction(it);
                 game.doAction(destroyAction);
                 if (destroyAction.isDestroyed()) {
-                    final int amount = MagicAmountFactory.SN_Toughness.getAmount(it, MagicPlayer.NONE);
+                    final int amount = it.getToughness();
                     game.doAction(new ChangeLifeAction(event.getPlayer(), amount));
                 }
             });
