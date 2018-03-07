@@ -137,7 +137,7 @@ public class DeckStrCal {
         }
 
         // Set number of games.
-        final DuelConfig config=new DuelConfig();
+        final DuelConfig config = DuelConfig.getInstance();
         config.setNrOfGames(games);
         config.setStartLife(life);
         
