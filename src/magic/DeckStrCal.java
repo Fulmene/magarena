@@ -6,6 +6,7 @@ import magic.data.DeckGenerators;
 import magic.data.DuelConfig;
 import magic.data.GeneralConfig;
 import magic.data.settings.IntegerSetting;
+import magic.data.MagicPredefinedFormat;
 import magic.exception.handler.ConsoleExceptionHandler;
 import magic.headless.HeadlessGameController;
 import magic.model.DuelPlayerConfig;
@@ -139,6 +140,9 @@ public class DeckStrCal {
         final DuelConfig config=new DuelConfig();
         config.setNrOfGames(games);
         config.setStartLife(life);
+        
+        // Use only Ixalan Standard cards
+        config.setCube(MagicPredefinedFormat.IXALAN_STANDARD);
 
         // Set difficulty.
         final MagicDuel testDuel=new MagicDuel(config);
