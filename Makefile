@@ -229,9 +229,25 @@ circleci:
 	make clean $(MAG)
 	make debug
 	$(eval MAG_ID := $(shell date +%s))
-	make games=50 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=50 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	$(eval MAG_ID := $(shell date +%s))
+	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	$(eval MAG_ID := $(shell date +%s))
+	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	$(eval MAG_ID := $(shell date +%s))
+	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	$(eval MAG_ID := $(shell date +%s))
+	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	$(eval MAG_ID := $(shell date +%s))
+	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	$(eval MAG_ID := $(shell date +%s))
+	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	$(eval MAG_ID := $(shell date +%s))
+	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	$(eval MAG_ID := $(shell date +%s))
+	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	make zips
 	mkdir /tmp/artifacts
 	mv release/Magarena.jar *.zip /tmp/artifacts
