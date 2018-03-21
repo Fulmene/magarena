@@ -229,28 +229,25 @@ circleci:
 	make clean $(MAG)
 	make debug
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make flags=-ea games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make flags=-ea games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make flags=-ea games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make flags=-ea games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make flags=-ea games=10 ai1=MMABC ai2=MCTS ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make flags=-ea games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make flags=-ea games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make flags=-ea games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
+	make flags=-ea games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 	$(eval MAG_ID := $(shell date +%s))
-	make games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
-	make zips
-	mkdir /tmp/artifacts
-	mv release/Magarena.jar *.zip /tmp/artifacts
+	make flags=-ea games=10 ai1=MMAB ai2=MCTSC ${MAG_ID}.t || (cat ${MAG_ID}.out && tail -20 ${MAG_ID}.log && false)
 
 test-self-play:
 	for i in `seq 1 5`; do \
