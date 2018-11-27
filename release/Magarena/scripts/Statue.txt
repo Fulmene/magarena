@@ -7,5 +7,6 @@ cost={2}{B}{G}
 split=Status
 effect=Destroy target artifact, creature, or enchantment.
 timing=removal
+second_half
 oracle=Destroy target artifact, creature, or enchantment.
 status=not supported: split-card
