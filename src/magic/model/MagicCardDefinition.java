@@ -228,7 +228,12 @@ public class MagicCardDefinition implements MagicAbilityStore, IRenderableCard {
 
     public synchronized void loadAbilities() {
         if (isPlayable() && (hasCost() || isLand()) && handActivations.isEmpty()) {
-            add(new MagicHandCastActivation(this));
+            if (isSplitCard()) {
+                add(new MagicSplitCastActivation(this));
+                add(new MagicSplitCastActivation(getSplitDefinition()));
+            } else {
+                add(new MagicHandCastActivation(this));
+            }
             if (isLegendary() && isSorcery()) {
                 add(MagicAdditionalCost.create(MagicCondition.LEGENDARY_SORCERY));
             }
